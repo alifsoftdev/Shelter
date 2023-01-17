@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'UI/route/route.dart';
+import 'UI/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
+            theme: Get.isDarkMode == false ?AppTheme().lightTheme(context):AppTheme().darkTheme(context),
             initialRoute:splash,
             getPages: getpages,
           );

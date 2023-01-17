@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shelter/const/AppColor.dart';
+import 'package:get/get.dart';
+
 
 Widget navHomeCategories(String categoryName, onClick) {
   return Padding(
@@ -16,7 +17,7 @@ Widget navHomeCategories(String categoryName, onClick) {
           onTap: onClick,
           child: Text(
             "See All",
-            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600,color:AppColor.green),
+            style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600,color: Get.isDarkMode == false ? Colors.green : Colors.blue,),
           ),
         ),
       ],

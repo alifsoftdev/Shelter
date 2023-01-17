@@ -17,7 +17,7 @@ class Settings extends StatelessWidget {
     return showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: const Text("are u sure to logout?"),
+              title:  Text("are u sure to logout?"),
               content: Row(
                 children: [
                   ElevatedButton(
@@ -29,14 +29,14 @@ class Settings extends StatelessWidget {
                       await box.remove('uid');
                       Get.toNamed(splash);
                     },
-                    child: const Text("Yes"),
+                    child:  Text("Yes"),
                   ),
                   SizedBox(
                     width: 10.w,
                   ),
                   ElevatedButton(
                     onPressed: () => Get.back(),
-                    child: const Text("No"),
+                    child:  Text("No"),
                   ),
                 ],
               ),
@@ -77,8 +77,7 @@ class Settings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: const Text("Settings"),
+        title:  Text("Settings",style: TextStyle(color: Get.isDarkMode == false ? Colors.black : Colors.white,),),
       ),
       body: Padding(
         padding: EdgeInsets.only(left: 25.w, right: 25.w, top: 20.h),
@@ -89,7 +88,7 @@ class Settings extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "darkMode".tr,
+                  "DarkMode".tr,
                   style:
                       TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w400),
                 ),
@@ -118,13 +117,7 @@ class Settings extends StatelessWidget {
               "languages".tr,
               () => changeLanguage(context),
             ),
-            // Container(
-            //   height: 100,
-            //   width: 300,
-            //   decoration: BoxDecoration(
-            //     color: Get.isDarkMode == false ? Colors.amber : Colors.blue,
-            //   ),
-            // ),
+            
           ],
         ),
       ),

@@ -34,7 +34,7 @@ class BottomNavController extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.menu,
-                        color: Colors.black,
+                        
                       ),
                     )
                   : IconButton(
@@ -43,13 +43,13 @@ class BottomNavController extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.close,
-                        color: Colors.black,
+                        
                       ),
                       iconSize: 20.sp,
                     ),
               title: Text(
                 "Shelter",
-                style: TextStyle(color: Colors.black, fontSize: 30.sp),
+                style: TextStyle( fontSize: 30.sp,color: Get.isDarkMode == false ? Colors.black : Colors.white,),
               ),
             ),
             bottomNavigationBar: BottomNavigationBar(

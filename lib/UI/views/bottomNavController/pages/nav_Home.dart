@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     height: 45.h,
                     decoration: BoxDecoration(
-                      color: Colors.grey[400],
+                      color: Get.isDarkMode == false ? Colors.grey : Colors.white,
                       borderRadius: BorderRadius.all(
                         Radius.circular(6.r),
                       ),
@@ -120,14 +120,14 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Icon(
                             Icons.search_outlined,
-                            size: 20.w,
+                            size: 20.w,color: Colors.black ,
                           ),
                           SizedBox(
                             width: 10.w,
                           ),
                           Text(
                             "Search for your next tour",
-                            style: TextStyle(fontSize: 15.sp),
+                            style: TextStyle(fontSize: 15.sp,color: Colors.black ,),
                           ),
                         ],
                       ),
@@ -250,7 +250,7 @@ ListView forYou(List<Map<dynamic, dynamic>> items) {
             width: 100.w,
             height: 180.h,
             decoration: BoxDecoration(
-              color: Color(0xFfC4C4C4),
+              
               borderRadius: BorderRadius.all(
                 Radius.circular(7.r),
               ),
@@ -304,7 +304,7 @@ ListView recentlyAdded(List<Map<dynamic, dynamic>> items) {
             width: 100.w,
             height: 180.h,
             decoration: BoxDecoration(
-              color: Color(0xFfC4C4C4),
+              
               borderRadius: BorderRadius.all(
                 Radius.circular(7.r),
               ),
@@ -358,7 +358,7 @@ ListView topPlaces(List<Map<dynamic, dynamic>> items) {
             width: 80.w,
             height: 80.h,
             decoration: BoxDecoration(
-              color: Color(0xFfC4C4C4),
+              
               shape: BoxShape.circle,
               image: DecorationImage(
                   image: NetworkImage(thisItem['list_images'][0]),

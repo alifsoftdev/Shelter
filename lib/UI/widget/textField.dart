@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../const/AppColor.dart';
 
 Widget customTextFormField(controller, String hintText, keyboardType) {
@@ -7,6 +8,7 @@ Widget customTextFormField(controller, String hintText, keyboardType) {
       controller: controller,
       keyboardType: keyboardType,
       decoration: InputDecoration(
+        
           hintText: hintText,
           hintStyle: TextStyle(
               fontSize: 15.sp,
@@ -50,7 +52,7 @@ Widget customTextField(title, controller, {maxline}) {
       ),
       Container(
         decoration: BoxDecoration(
-          color: AppColor.white,
+         color: Get.isDarkMode == false ? Colors.grey : Colors.white,
           borderRadius: BorderRadius.all(
             Radius.circular(7.r),
           ),

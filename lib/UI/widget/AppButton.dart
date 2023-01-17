@@ -20,13 +20,13 @@ class VioletButton extends StatelessWidget {
         child: Container(
           height: 45.h,
           decoration: BoxDecoration(
-              color: AppColor.blue,
+              color: Get.isDarkMode == false ? AppColor.blue : Colors.blue,
               borderRadius: BorderRadius.all(Radius.circular(5.r))),
           child: _value == false
               ? Center(
                   child: Text(
                     title,
-                    style:  TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w300,color: AppColor.white),
+                    style:  TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w300),
                   ),
                 )
               : Row(
@@ -35,7 +35,7 @@ class VioletButton extends StatelessWidget {
                     Center(
                       child: Text(
                         'Please wait',
-                        style:TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w300,color: AppColor.white),
+                        style:TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w300,),
                       ),
                     ),
                     SizedBox(
@@ -43,7 +43,7 @@ class VioletButton extends StatelessWidget {
                     ),
                     Transform.scale(scale: 0.5.r,child: CircularProgressIndicator(
                       
-                      color: AppColor.white,
+                     
                     ))
                   ],
                 ),
